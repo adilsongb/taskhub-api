@@ -8,3 +8,10 @@ services:
       - "3001:3001"
     volumes:
       - .:/app
+    links:
+      - mongo
+  mongo:
+    container_name: mongo
+    image: mongo
+    ports:
+      - "27017:27017"
